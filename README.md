@@ -39,9 +39,9 @@
 * Dirección IP (Externa, del ISP): 201.223.26.106
 * Proveedor internet: VTR Banda Ancha S.A.
 
-# MCOC2021-P1
+# MCOC2021-P0-E2
 
-# Preguntas-P1
+# Preguntas-P0-E2
 
 * Difiere en que mi gráfico contiene menos tamaños de matrices, es decir, el largo de la lista N es menor a que la del profesor.
 * Las diferencias entre cada corrida se puede deber a que al momento de la ejecución del programa hay otros procesos en ejecución, por lo que hay variaciones pequeñas en la cantidad de recursos disponibles para la ejecución del py.
