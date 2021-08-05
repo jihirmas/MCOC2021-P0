@@ -39,6 +39,17 @@
 * Dirección IP (Externa, del ISP): 201.223.26.106
 * Proveedor internet: VTR Banda Ancha S.A.
 
+# MCOC2021-P1
+
+# Preguntas-P1
+
+*Difiere en que mi gráfico contiene menos tamaños de matrices, es decir, el largo de la lista N es menor a que la del profesor.
+*Las diferencias entre cada corrida se puede deber a que al momento de la ejecución del programa hay otros procesos en ejecución, por lo que hay variaciones pequeñas en la cantidad de recursos disponibles para la ejecución del py.
+*Esto es justo por lo explicado en la pregunta anterior, ya que al tener menos recursos disponibles, el tiempo puede sufrir variaciones, ya sean de pérdida o de ganancia de tiempo.
+*Versión 3.8
+*Versión 1.20.2
+*Si, se usa más de un procesador.
+![image](https://user-images.githubusercontent.com/70209467/128419321-9774b867-c7bb-40f9-907a-c99a5cca2935.png)
 
 
 
