@@ -14,7 +14,7 @@ Ns = [10,20,50,100,200,500,1000,2000,5000,10000]
 dts = []
 mems = []
 
-p = 0#int(input("¿Primera corrida? (si = 1, no = 0) "))
+p = int(input("¿Primera corrida? (si = 1, no = 0) "))
 if p:
     fid = open("rendimiento.txt","w")
 else:
