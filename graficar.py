@@ -23,7 +23,7 @@ plt.subplot(2,1,1)
 for i in range(len(tiempo_t)):
     plt.loglog(N,tiempo_t[i],marker="o")
 plt.grid(1)
-plt.xticks(visible=0)
+plt.xticks([10,20,50,100,200,500,1000,2000,5000,10000,20000],['10', '20', '50', '100', '200', '500', '1000', '2000', '5000', '10000',"20000"],rotation=45,visible=0)
 plt.yticks([0.0001,0.001,0.01,0.1,1,10,60,600],["0.1 ms","1 ms","10 ms","0.1 s","1 s","10 s","1 min","10 min"])
 plt.ylabel("Tiempo transcurrido")
 plt.title("Rendimiento A@B")
