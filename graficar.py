@@ -11,7 +11,7 @@ for i in range(10):
     tiempo = []
     memoria = []
     N = []
-    for j in range(len([10,20,50,100,200,500,1000,2000,5000,10000])):
+    for j in range(len([10,20,30,40,50,60,70,80,90,100,150,200,250,300,350,400,450,500,750,1000,1500,2000,5000,10000])):
         a = fid.readline().split()
         N.append(int(a[0]))
         memoria.append(int(a[2]))
