@@ -1,6 +1,6 @@
 # MCOC2021-P0
 
-# Mi computador principal
+#P0-E1 Mi computador principal
 
 * Marca/modelo: HP Pavilion Gaming Laptop 16-a0004la
 * Tipo: Notebook
@@ -39,9 +39,7 @@
 * Dirección IP (Externa, del ISP): 201.223.26.106
 * Proveedor internet: VTR Banda Ancha S.A.
 
-# MCOC2021-P0-E2
-
-# Preguntas-P0-E2
+# P0-E2
 
 * Difiere en que mi gráfico contiene menos tamaños de matrices, es decir, el largo de la lista N es menor a que la del profesor.
 * Las diferencias entre cada corrida se puede deber a que al momento de la ejecución del programa hay otros procesos en ejecución, por lo que hay variaciones pequeñas en la cantidad de recursos disponibles para la ejecución del py.
@@ -51,5 +49,7 @@
 * Si, se usa más de un procesador.
 ![image](https://user-images.githubusercontent.com/70209467/128419321-9774b867-c7bb-40f9-907a-c99a5cca2935.png)
 
+# P0-E3
 
+*
 
