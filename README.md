@@ -51,5 +51,13 @@
 
 # P0-E3
 
-*
+* Para la primera parte, se destaca que para numpy.linalg.inv, los tipos de datos half y longdouble no son admitidos debido a la codificación de tal librería. Para scipy funcionan los 4 tipos de datos
+* Al correr todos los scripts, se nota que usar overwrite_a=True mejora notablemente el tiempo de ejecución, no así la cantidad de memoria.
 
+Respondiendo a las preguntas...
+¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
+-> Para el método de numpy.linalg.inv(), basicamente usa el algoritmo solve(A,I), donde I es la identidad, y lo resuelve mediante el algoritmo de factorización LU de lapack's. En cuanto a scipy.linalg.inv(), resuleve la inversa usando el método del pivoteo y la factorización LU. Scipy.linalg.inv() puede tener como parámetro overwrirte_a = (1,0), al ser 1, trabaja con los datos de la matriz entregada, mientras que en caso contrario, retornará una matriz creada desde 0. Usar el parámetro overwrite_a=True, mejoró notablemente el proceso de inversión en tiempo.
+¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
+-> El paralelismo incide de manera positiva en el desempeño de cada caso, pues al usar todos los recursos disponibles (sin contar los autorizados por SUDO), la resolución de problemas es desarrollada de manera más rápida. El paralelismo se puede ver claramente en la siguiente imagen.
+
+![image](https://user-images.githubusercontent.com/70209467/129839372-fe587cef-21d2-4312-957b-e51ff4266498.png)
