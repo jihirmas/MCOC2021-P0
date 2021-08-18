@@ -1,6 +1,6 @@
 # MCOC2021-P0
 
-#P0-E1 Mi computador principal
+# P0-E1 
 
 * Marca/modelo: HP Pavilion Gaming Laptop 16-a0004la
 * Tipo: Notebook
