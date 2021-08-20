@@ -97,6 +97,7 @@ def Correr(txt, d, Nc, Nr, caso):
     tiempos_todos = []
     fid = open(txt,"a+")
     for k in range(1,Nr):
+        t11 = perf_counter()
         print("Caso "+str(k)+" de "+str(txt))
         for a in range(Nc):
             # print("corrida "+str(a+1)+" Caso "+str(k)+" de "+str(txt))
@@ -116,9 +117,11 @@ def Correr(txt, d, Nc, Nr, caso):
         ll = promedios(tiempos_todos)
         for i in range(len(ll)):
             fid.write(f"{Ns[i]} {ll[i]} {memorias[i]}\n")
+        t22 = perf_counter()
+        print(t22-t11)
     fid.close()
 
-Ns = [10,20,30,40,50,60,70,80,90,100,150,200,250,300,350,400,450,500,750,800,900,1000,1250,1500,1750,2000,2500,5000,7500,10000,12500]
+Ns = [10,20,30,40,50,60,70,80,90,100,150,200,250,300,350,400,450,500,750,800,900,1000,1250,1500,1750,2000,2500,3000,3500,4000]
 Ncorridas = 9
 
 Correr("solve float.txt", single, Ncorridas, 8, "A")
