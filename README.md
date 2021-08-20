@@ -2,7 +2,7 @@
 
 # P0-E4
 
-* Comentario Completo: Para el problema A, es decir, donde hay que resolver Ax=b, se usaron bastantes variaciones de una misma función, además de compararla con el caso bruto (hacerlo directamente como si fuese a papel). En el gráfico solve float.png y solve double.png, se puede apreciar que, independiente del tipo de dato, el tiempo de resolución es menor mientras más sobrepociciones hayan, es decir, overwrite_a o overwrite_b = True. En términos de procesador, se puede notar que se usa paralelismo y eso genera que la CPU no llegue al 100%. En cuanto a memoria, se obsera lo mismo que la entrega P0E3. En cuanto al problema B, de los vectores propios, se nota inmediatamente que es un problema mucho más complejo y largo de resolver. Se probaron los 9 casos descritos en el enucniado, y se observa que el que resuleve con mayor rapidez es el método con sus valores por defecto, donde el que más asombra es el overwrite_a, pues en las otras entregas se ha visto que esto mejora el rendimiento pero aquí eso no se cumple.
+* Comentario Completo: Para el problema A, es decir, donde hay que resolver Ax=b, se usaron bastantes variaciones de una misma función, además de compararla con el caso bruto (hacerlo directamente como si fuese a papel). En el gráfico solve float.png y solve double.png, se puede apreciar que, independiente del tipo de dato, el tiempo de resolución es menor mientras más sobrepociciones hayan, es decir, overwrite_a o overwrite_b = True. En términos de procesador, se puede notar que se usa paralelismo y eso genera que la CPU no llegue al 100%. En cuanto a memoria, se obsera lo mismo que la entrega P0E3. En cuanto al problema B, de los vectores propios, se nota inmediatamente que es un problema mucho más complejo y largo de resolver. Se probaron los 9 casos descritos en el enucniado, y se observa que el que resuleve con mayor rapidez es el método con sus valores por defecto, donde el que más asombra es el overwrite_a, pues en las otras entregas se ha visto que esto mejora el rendimiento pero aquí eso no se cumple. Cabe destacar que para el caso de los vectores propios con tipo de dato double, se redujo el número de N hasta 2000 en vez de los 12500 que se utilizó en los otros. Esto se decidió ya que el timepo de ejecución estaba siendo extremadamente alto. (superior a la hora por cada caso)
 * Respondiendo a las preguntas...
 1) Para los vectores propis, se puede ver que la variabilidad del tiempo es cada vez mayor según aumenta el tamaño de la matriz, sin contar los valores inciales (pequeños). En cambio, para el método solve, se aprecia que la variación entre métodos se puede mantener constante.
 
@@ -10,7 +10,11 @@
 
 3) Claro que depende del tamaño de la matriz, ya que mientras mayor es esta, más recursos y tiempo toma la resolución de la misma.
 
-4) 
+4) Se debe a que en el caso de solve, el sobrescrimiento de datos sugiere un mejor uso del tiempo y de los recursos, ya que se utiliza menos ram. En cuanto a los vecotres propios, la eficiencia de la función es la destaca, siendo los parámetros adicionales solo modificaciones de la misma.
+
+5) Si se utiliza más de un procesador, de hecho, durante toda la corrida se utilizaron todos los procesadores. La imagen del administrador de tareas era similar a la que se subió para la P0E3.
+
+6) El uso de memoria crece logarítimicamente con factor N, es decir, en conjunto con el crecimiento de los N.
 
 # P0-E3
 
