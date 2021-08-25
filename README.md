@@ -1,5 +1,24 @@
 # MCOC2021-P0
 
+# P0-E5
+```
+def laplaciana(N,tipo):
+    A = zeros((N,N),dtype = tipo)
+    
+    for i in range(N):
+        A[i][i] = 2
+        for j in range(max(0,i-2),i+1):
+            if abs(i-j) == 1:
+                    A[i][j] = -1
+                    A[j][i] = -1
+               
+    A[N-1][N-1] = 2; A[N-1][N-2] = -1
+    return A
+```
+* En este análisis, podemos ver como claramente los tiempos de cada acción, tienen una clara tendencia a una complejidad. Para el caso de las matrices dispersas, si bien el tiempo de solución es mucho menos, muestra una complejidad O(N), mientras que el ensamblaje tiene una complejidad 0(N^2). 
+* Para el caso de las matrices llenas, la complejidad de ensamblaje se aproxima a O(N^2), mientras que la solución se aproxima a complejidad O(N^3), lo que demuestra un tiempo y complejidad más alto que las matrices dispersas. Es por esto que es mejor usar estas últimas ya que se ahorra tiempo y complejidad, además de memoria.
+
+
 # P0-E4
 
 * Comentario Completo: Para el problema A, es decir, donde hay que resolver Ax=b, se usaron bastantes variaciones de una misma función, además de compararla con el caso bruto (hacerlo directamente como si fuese a papel). En el gráfico solve float.png y solve double.png, se puede apreciar que, independiente del tipo de dato, el tiempo de resolución es menor mientras más sobrepociciones hayan, es decir, overwrite_a o overwrite_b = True. En términos de procesador, se puede notar que se usa paralelismo y eso genera que la CPU no llegue al 100%. En cuanto a memoria, se obsera lo mismo que la entrega P0E3. En cuanto al problema B, de los vectores propios, se nota inmediatamente que es un problema mucho más complejo y largo de resolver. Se probaron los 9 casos descritos en el enucniado, y se observa que el que resuleve con mayor rapidez es el método con sus valores por defecto, donde el que más asombra es el overwrite_a, pues en las otras entregas se ha visto que esto mejora el rendimiento pero aquí eso no se cumple. Cabe destacar que  se redujo el número de N hasta 4000 en vez de los 10000 que se utilizó en las otras entregas. Esto se decidió ya que el timepo de ejecución estaba siendo extremadamente alto. (superior a la hora por cada caso)
