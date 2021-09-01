@@ -1,5 +1,31 @@
 # MCOC2021-P0
 
+# P0-E6
+
+1) Se ven claras diferencias al observar los gráficos de tiempo. Estas diferencias son princpialmente en la complejidad de cada algoritmo, donde claramente esta disminuye para las matrices dispersas en el tiempo de solución. En ensamblado, las mastrices llenas se demoran menos que la solución, pero solo pasa por la forma en que es el algoritmo de la laplaciana.
+
+2) La complejidad de ensamblado de matrices llenas es O(N), para las disperas, O(N^2). Para la solución, las dispersas INV() y SOLVE(), tiene complejidad O(N^2), mientras que para matrices llenas, INV() tiene complejidad O(N^3) y SOLVE() O(N).
+
+3) El tamaño de las matrices, básicamente hace que se demore logarítmicamente más a medida que se aumenta el tamaño, tal como se ha visto en las otras entregas.
+
+4) Las corridas por lo general son estables, a excepción de la primera, que siempre se demora distinto en la partida, o más rápido o más lento. Este comportamiento se puede ver en los gráficos adjuntos. Esto podría suceder por el tiempo en que se demora la partida del proceso al procesador, no así cuando este ya está procesando y le entra la misma tarea.
+
+```
+def laplaciana(N,tipo):
+    A = zeros((N,N),dtype = tipo)
+    for i in range(N):
+        A[i][i] = 2
+        for j in range(max(0,i-2),i+1):
+            if abs(i-j) == 1:
+                    A[i][j] = -1
+                    A[j][i] = -1
+               
+    A[N-1][N-1] = 2; A[N-1][N-2] = -1
+    return A
+```
+
+Usar este algoritmo, al tener for dentro de for, la complejidad aumenta a O(N). El desempeño de esta, aumentará a velocidad O(N) según se aumente el tamaño de la matriz.
+
 # P0-E5
 ```
 def laplaciana(N,tipo):
